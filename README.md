@@ -58,3 +58,11 @@ Aplicación web desarrollada con **React + TypeScript** y **Bootstrap**, diseña
 ```
 El proyecto estará disponible en:
 http://localhost:5173
+
+---
+
+## Web Desplegada
+
+Puedes ver la web desplegada en vercel en el siguiente enlace:
+
+[Enlace a la web desplegada](https://webresponsivaolive.vercel.app)
