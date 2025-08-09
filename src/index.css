@@ -148,3 +148,18 @@ footer a:hover{ text-decoration: underline; }
   object-fit: contain;
   border-radius: 50%; /* opcional: lo hace redondo */
 }
+
+/* Hace que el footer se quede pegado al borde inferior */
+html, body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto; /* Empuja el footer al final */
+}
