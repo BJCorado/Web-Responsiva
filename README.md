@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# 🌐 Web Responsiva
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React + TypeScript** y **Bootstrap**, diseñada para adaptarse automáticamente a diferentes tamaños de pantalla (móvil, tableta y escritorio) mediante **utilidades responsivas** y **media queries personalizadas**.
 
-Currently, two official plugins are available:
+## 📋 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Encabezado (Header)** con logo y menú de navegación responsivo (menú hamburguesa en móvil).
+- **Sección principal (Main)** con título y descripción.
+- **Sección de tarjetas (Section)** con layout adaptable:
+  - 1 columna en móvil (≤600px)
+  - 2 columnas en tableta (601px–1024px)
+  - 3 columnas en escritorio (>1024px)
+- **Pie de página (Footer)** con enlaces a redes sociales.
+- Diseño mejorado con tipografía, colores y efectos `hover`.
+- Documentación de **media queries** dentro del CSS, explicando su función en cada breakpoint.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologías utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) (entorno de desarrollo rápido)
+- [Bootstrap 5](https://getbootstrap.com/) + [React Bootstrap](https://react-bootstrap.github.io/) (componentes y utilidades responsivas)
+- CSS personalizado con media queries documentadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Instalación y ejecución local
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/BJCorado/Web-Responsiva.git
+
+2. **Entrar a la carpeta del proyecto**
+```bash
+   cd Web-Responsiva
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. **Instalar dependencias**
+```bash
+   npm install
 ```
+4. **Iniciar el servidor en desarrollo**
+```bash
+   npm run dev
+```
+El proyecto estará disponible en:
+http://localhost:5173
