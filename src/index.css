@@ -1,0 +1,150 @@
+/* =========================
+   Variables y estilos base
+   ========================= */
+:root{
+  --brand: #0d6efd;          /* azul Bootstrap */
+  --brand-2: #6f42c1;        /* morado */
+  --text: #212529;
+  --muted: #6c757d;
+  --radius-card: 18px;
+  --shadow-1: 0 8px 24px rgba(0,0,0,.08);
+  --shadow-2: 0 12px 28px rgba(0,0,0,.12);
+  --max-text-width: 60ch;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: #fff;
+}
+
+/* Limitar ancho en pantallas grandes para que el contenido no “flote” */
+.container { max-width: 1140px; }
+
+/* Párrafos intro limitados en ancho para legibilidad */
+.main-intro { max-width: var(--max-text-width); margin-inline: auto; }
+
+/* Evitar que el contenido anclado quede oculto tras el navbar sticky */
+#main, #section, #footer { scroll-margin-top: 80px; }
+
+/* =========================
+   NAVBAR (sin tocar el logo)
+   ========================= */
+.navbar {
+  backdrop-filter: saturate(160%) blur(8px);
+  background: linear-gradient(180deg, rgba(33,37,41,.92), rgba(33,37,41,.86)) !important;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.navbar-dark .navbar-brand { font-weight: 700; letter-spacing: .2px; }
+.navbar-dark .nav-link{
+  font-weight: 600;
+  opacity: .9;
+  transition: opacity .15s ease, text-decoration-color .15s ease;
+}
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus{
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.6);
+}
+
+/* =========================
+   HERO (Main)
+   ========================= */
+main#main{
+  padding: clamp(2rem, 6vw, 5rem) 0;
+  background:
+    radial-gradient(80rem 30rem at 10% -10%, rgba(13,110,253,.08), transparent 60%),
+    radial-gradient(80rem 30rem at 110% -10%, rgba(111,66,193,.10), transparent 60%),
+    #fff;
+}
+main h1{
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  letter-spacing: .3px;
+}
+main p{
+  color: var(--muted);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+}
+
+/* =========================
+   Títulos de sección
+   ========================= */
+.section-title{
+  position: relative;
+  display: inline-block;
+  padding-bottom: .55rem;
+}
+
+/* =========================
+   Cards con hover
+   ========================= */
+.card{
+  border: 1px solid rgba(0,0,0,.06) !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-1);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2);
+  border-color: rgba(13,110,253,.25) !important;
+}
+.card-title{ font-weight: 700; }
+
+/* =========================
+   Footer
+   ========================= */
+footer{
+  background: linear-gradient(180deg, #1f2327, #1c1f23);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+footer a:hover{ text-decoration: underline; }
+
+/* =========================
+   MEDIA QUERIES (requeridas)
+   ========================= */
+
+/* ====== MÓVIL (≤600px) ======
+   Objetivo: legibilidad y stacking en 1 columna.
+   Efectos: tipografía cómoda y navbar compacto.
+*/
+@media (max-width: 600px) {
+  main h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+  main p, .card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .navbar { padding-block: .5rem; }
+}
+
+/* ====== TABLET (601px–1024px) ======
+   Objetivo: 2 columnas (grid md=6) y mejor espaciado.
+*/
+@media (min-width: 601px) and (max-width: 1024px) {
+  main h1 { font-size: 2.3rem; }
+  .card-title { font-size: 1.15rem; }
+  section#section { padding-block: 3rem; }
+}
+
+/* ====== ESCRITORIO (>1024px) ======
+   Objetivo: 3 columnas (grid lg=4) y proporciones equilibradas.
+*/
+@media (min-width: 1025px) {
+  main h1 { font-size: 2.6rem; }
+  .card-title { font-size: 1.2rem; }
+  .container { max-width: 1140px; }
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 50%; /* opcional: lo hace redondo */
+}
