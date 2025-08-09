@@ -24,6 +24,19 @@ Aplicación web desarrollada con **React + TypeScript** y **Bootstrap**, diseña
 - CSS personalizado con media queries documentadas
 
 ---
+## 📱 Vista previa
+
+### 🖥️ Escritorio
+![Vista escritorio](escritorio.png)
+
+### 📟 Tableta
+![Vista tableta](tablet.png)
+
+### 📱 Móvil
+![Vista móvil](telefono.png)
+
+
+---
 
 ## 📦 Instalación y ejecución local
 
