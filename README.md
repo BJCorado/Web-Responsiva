@@ -65,4 +65,4 @@ http://localhost:5173
 
 Puedes ver la web desplegada en vercel en el siguiente enlace:
 
-[Enlace a la web desplegada](https://webresponsivaolive.vercel.app)
+https://web-responsiva-olive.vercel.app/
